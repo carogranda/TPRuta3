@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Horarios — Ruta 3 Retiro–Zárate</title>
+  <link rel="stylesheet" href="styleretiro.css"/>
+  <link rel="stylesheet" href="horarios.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav__logo">Ruta <span>3</span></div>
+    <ul class="nav--list">
+      <li><a class="nav_link" href="index.html">Inicio</a></li>
+      <li><a class="nav_link" href="recorrido.html">Recorrido</a></li>
+      <li><a class="nav_link nav_link--active" href="horarios.html">Horarios</a></li>
+      <li><a class="nav_link" href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <div class="page-hero__label">HORARIOS</div>
+      <h1 class="page-hero__title">Salidas<br>diarias</h1>
+      <p class="page-hero__sub">Todos los días del año · Retiro ↔ Zárate</p>
+    </div>
+  </section>
+
+  <!-- FILTRO DIRECCIÓN -->
+  <section class="horarios-section">
+    <div class="horarios-section__inner">
+
+      <div class="horarios-header">
+        <div class="section__label">TABLA DE HORARIOS</div>
+        <h2 class="section__title">Todos los servicios</h2>
+      </div>
+
+      <!-- Selector dirección -->
+      <div class="dir-selector">
+        <button class="dir-btn dir-btn--active" id="btn-rz" onclick="filtrarDir('rz')">
+          Retiro → Zárate
+        </button>
+        <button class="dir-btn" id="btn-zr" onclick="filtrarDir('zr')">
+          Zárate → Retiro
+        </button>
+      </div>
+
+      <!-- TABLA RETIRO → ZÁRATE -->
+      <div class="tabla-wrapper" id="tabla-rz">
+        <table class="tabla-horarios">
+          <thead>
+            <tr>
+              <th>Salida Retiro</th>
+              <th>Llegada Zárate</th>
+              <th>Tipo</th>
+              <th>Días</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="hora">06:00 hs</td>
+              <td class="hora">07:30 hs</td>
+              <td><span class="badge badge--ejecutivo">Ejecutivo</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">07:00 hs</td>
+              <td class="hora">08:30 hs</td>
+              <td><span class="badge badge--comun">Común</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">08:30 hs</td>
+              <td class="hora">10:00 hs</td>
+              <td><span class="badge badge--ejecutivo">Ejecutivo</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--demorado">+20 min</span></td>
+            </tr>
+            <tr>
+              <td class="hora">10:00 hs</td>
+              <td class="hora">11:30 hs</td>
+              <td><span class="badge badge--comun">Común</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">12:00 hs</td>
+              <td class="hora">13:30 hs</td>
+              <td><span class="badge badge--ejecutivo">Ejecutivo</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">14:00 hs</td>
+              <td class="hora">15:30 hs</td>
+              <td><span class="badge badge--comun">Común</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">16:00 hs</td>
+              <td class="hora">17:30 hs</td>
+              <td><span class="badge badge--ejecutivo">Ejecutivo</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">18:00 hs</td>
+              <td class="hora">19:30 hs</td>
+              <td><span class="badge badge--comun">Común</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">20:00 hs</td>
+              <td class="hora">21:30 hs</td>
+              <td><span class="badge badge--ejecutivo">Ejecutivo</span></td>
+              <td>Lun a Vie</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">22:00 hs</td>
+              <td class="hora">23:30 hs</td>
+              <td><span class="badge badge--comun">Común</span></td>
+              <td>Lun a Vie</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- TABLA ZÁRATE → RETIRO -->
+      <div class="tabla-wrapper tabla-wrapper--oculta" id="tabla-zr">
+        <table class="tabla-horarios">
+          <thead>
+            <tr>
+              <th>Salida Zárate</th>
+              <th>Llegada Retiro</th>
+              <th>Tipo</th>
+              <th>Días</th>
+              <th>Estado</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="hora">05:30 hs</td>
+              <td class="hora">07:00 hs</td>
+              <td><span class="badge badge--ejecutivo">Ejecutivo</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">06:30 hs</td>
+              <td class="hora">08:00 hs</td>
+              <td><span class="badge badge--comun">Común</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">08:00 hs</td>
+              <td class="hora">09:30 hs</td>
+              <td><span class="badge badge--ejecutivo">Ejecutivo</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">10:30 hs</td>
+              <td class="hora">12:00 hs</td>
+              <td><span class="badge badge--comun">Común</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">13:00 hs</td>
+              <td class="hora">14:30 hs</td>
+              <td><span class="badge badge--ejecutivo">Ejecutivo</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--demorado">+15 min</span></td>
+            </tr>
+            <tr>
+              <td class="hora">15:30 hs</td>
+              <td class="hora">17:00 hs</td>
+              <td><span class="badge badge--comun">Común</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">17:30 hs</td>
+              <td class="hora">19:00 hs</td>
+              <td><span class="badge badge--ejecutivo">Ejecutivo</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">19:30 hs</td>
+              <td class="hora">21:00 hs</td>
+              <td><span class="badge badge--comun">Común</span></td>
+              <td>Lun a Dom</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+            <tr>
+              <td class="hora">21:00 hs</td>
+              <td class="hora">22:30 hs</td>
+              <td><span class="badge badge--ejecutivo">Ejecutivo</span></td>
+              <td>Lun a Vie</td>
+              <td><span class="estado estado--ok">A tiempo</span></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+      <!-- Nota -->
+      <div class="horarios-nota">
+        <svg viewBox="0 0 24 24" fill="none" width="16" height="16">
+          <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8"/>
+          <line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+          <circle cx="12" cy="16" r="1" fill="currentColor"/>
+        </svg>
+        Los horarios son orientativos y pueden variar por condiciones de tráfico o climáticas. El estado se actualiza en tiempo real.
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">RETIRO <span>→</span> ZÁRATE</div>
+      <div class="footer__info">Información orientativa · sujeta a variaciones por tráfico</div>
+    </div>
+  </footer>
+
+  <script>
+    function filtrarDir(dir) {
+      document.getElementById('tabla-rz').classList.toggle('tabla-wrapper--oculta', dir !== 'rz');
+      document.getElementById('tabla-zr').classList.toggle('tabla-wrapper--oculta', dir !== 'zr');
+      document.getElementById('btn-rz').classList.toggle('dir-btn--active', dir === 'rz');
+      document.getElementById('btn-zr').classList.toggle('dir-btn--active', dir === 'zr');
+    }
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Recorrido — Ruta 3 Retiro–Zárate</title>
+  <link rel="stylesheet" href="styleretiro.css"/>
+  <link rel="stylesheet" href="recorrido.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="navbar">
+    <div class="nav__logo">Ruta <span>3</span></div>
+    <ul class="nav--list">
+      <li><a class="nav_link" href="index.html">Inicio</a></li>
+      <li><a class="nav_link nav_link--active" href="recorrido.html">Recorrido</a></li>
+      <li><a class="nav_link" href="horarios.html">Horarios</a></li>
+      <li><a class="nav_link" href="contacto.html">Contacto</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="page-hero">
+    <div class="page-hero__inner">
+      <div class="page-hero__label">RECORRIDO</div>
+      <h1 class="page-hero__title">El camino<br>al norte</h1>
+      <p class="page-hero__sub">Terminal Retiro · Panamericana RN9 · Av. Lavalle · Zárate</p>
+      <div class="page-hero__pills">
+        <span class="pill">97 km</span>
+        <span class="pill">~90 min</span>
+        <span class="pill">Ruta Nacional 9</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAPA INTERACTIVO -->
+  <section class="mapa-section">
+    <div class="mapa-section__inner">
+
+      <div class="mapa-section__header">
+        <div class="section__label">MAPA INTERACTIVO</div>
+        <h2 class="section__title">Recorrido completo</h2>
+        <p class="mapa-section__desc">Hacé click en cada parada para ver los detalles del tramo.</p>
+      </div>
+
+      <div class="mapa-wrapper">
+        <!-- Mapa embed de Google Maps con el recorrido real -->
+        <iframe
+          class="mapa-iframe"
+          src="https://www.google.com/maps/embed?pb=!1m28!1m12!1m3!1d395000!2d-59.1!3d-34.3!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!4m13!3e0!4m5!1s0x95bcca3b05742bc9%3A0x4a2a5f18f5555c73!2sTerminal%20de%20Retiro%2C%20Buenos%20Aires!3m2!1d-34.5915!2d-58.3784!4m5!1s0x95bb60f123456789%3A0x1!2sZ%C3%A1rate%2C%20Buenos%20Aires!3m2!1d-34.0978!2d-59.0289!5e0!3m2!1ses!2sar!4v1"
+          width="100%"
+          height="480"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+
+      <!-- PARADAS INTERACTIVAS -->
+      <div class="paradas">
+
+        <div class="parada parada--activa" onclick="activarParada(this, 0)">
+          <div class="parada__marker parada__marker--origen">A</div>
+          <div class="parada__info">
+            <div class="parada__nombre">Terminal de Retiro</div>
+            <div class="parada__detalle">Av. Ramos Mejía · Buenos Aires</div>
+          </div>
+          <div class="parada__tiempo">0 min</div>
+        </div>
+
+        <div class="parada__linea"></div>
+
+        <div class="parada" onclick="activarParada(this, 1)">
+          <div class="parada__marker">1</div>
+          <div class="parada__info">
+            <div class="parada__nombre">Paseo del Bajo / Lugones</div>
+            <div class="parada__detalle">Incorporación a la autopista costera</div>
+          </div>
+          <div class="parada__tiempo">~10 min</div>
+        </div>
+
+        <div class="parada__linea"></div>
+
+        <div class="parada" onclick="activarParada(this, 2)">
+          <div class="parada__marker">2</div>
+          <div class="parada__info">
+            <div class="parada__nombre">Autopista Panamericana</div>
+            <div class="parada__detalle">Ruta Nacional 9 · Tramo principal norte</div>
+          </div>
+          <div class="parada__tiempo">~20 min</div>
+        </div>
+
+        <div class="parada__linea"></div>
+
+        <div class="parada" onclick="activarParada(this, 3)">
+          <div class="parada__marker parada__marker--destino">Z</div>
+          <div class="parada__info">
+            <div class="parada__nombre">Terminal de Zárate</div>
+            <div class="parada__detalle">Ingreso por Av. Lavalle · Zárate</div>
+          </div>
+          <div class="parada__tiempo">~90 min</div>
+        </div>
+
+      </div>
+
+      <!-- INFO TRAMO (cambia según parada activa) -->
+      <div class="tramo-info" id="tramo-info">
+        <div class="tramo-info__icon">🚌</div>
+        <div class="tramo-info__content">
+          <div class="tramo-info__titulo" id="tramo-titulo">Terminal de Retiro</div>
+          <div class="tramo-info__desc" id="tramo-desc">Punto de partida del servicio. Ubicada en Av. Ramos Mejía, en el corazón de Buenos Aires. Contamos con sala de espera, boleterías y estacionamiento.</div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- STATS -->
+  <section class="stats-section">
+    <div class="stats-section__inner">
+      <div class="stat-item">
+        <div class="stat-item__valor">97<span>km</span></div>
+        <div class="stat-item__label">Distancia total</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__valor">~90<span>min</span></div>
+        <div class="stat-item__label">Duración estimada</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__valor">4</div>
+        <div class="stat-item__label">Tramos de ruta</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-item__valor">RN<span>9</span></div>
+        <div class="stat-item__label">Ruta Nacional</div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer__inner">
+      <div class="footer__brand">RETIRO <span>→</span> ZÁRATE</div>
+      <div class="footer__info">Información orientativa · sujeta a variaciones por tráfico</div>
+    </div>
+  </footer>
+
+  <script>
+    const infoParadas = [
+      {
+        icon: '🚌',
+        titulo: 'Terminal de Retiro',
+        desc: 'Punto de partida del servicio. Ubicada en Av. Ramos Mejía, en el corazón de Buenos Aires. Contamos con sala de espera, boleterías y estacionamiento.'
+      },
+      {
+        icon: '🛣️',
+        titulo: 'Paseo del Bajo / Autopista Lugones',
+        desc: 'El micro toma el Paseo del Bajo y se incorpora a la Autopista Lugones, circulando hacia el norte por la costanera del Río de la Plata.'
+      },
+      {
+        icon: '🚦',
+        titulo: 'Autopista Panamericana — Ruta Nacional 9',
+        desc: 'Tramo principal del recorrido. Más de 80 km directo al norte por la RN9, con velocidad de crucero y sin paradas intermedias.'
+      },
+      {
+        icon: '📍',
+        titulo: 'Terminal de Zárate',
+        desc: 'Destino final. El micro ingresa a Zárate por Av. Lavalle y llega a la terminal. Tiempo estimado desde Retiro: 90 minutos.'
+      }
+    ];
+
+    function activarParada(el, idx) {
+      document.querySelectorAll('.parada').forEach(p => p.classList.remove('parada--activa'));
+      el.classList.add('parada--activa');
+      const info = infoParadas[idx];
+      document.querySelector('.tramo-info__icon').textContent  = info.icon;
+      document.getElementById('tramo-titulo').textContent = info.titulo;
+      document.getElementById('tramo-desc').textContent   = info.desc;
+    }
+  </script>
+
+</body>
+</html>

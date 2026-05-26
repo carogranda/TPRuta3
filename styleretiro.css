@@ -1,0 +1,870 @@
+body{
+    /*fondo*/
+    background-color: #ffffff;
+    /*textos*/
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 1rem;
+    color: #1f2937;
+
+    /*margenes*/
+    margin: 0;
+    padding: 0;
+
+
+
+    /*interlineado*/
+    line-height: 1.6;
+    
+}
+
+/*titulo ruta 3*/
+.ruta3tittle{
+    font-family: 'bebas neue', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 0.3em;
+    color: #2563eb;
+    text-transform: uppercase;
+    margin-bottom: 0.5rem;
+    opacity: 0.8;
+}
+
+/*titulo Retiro -> Zarate*/
+.retiro--tittle{
+    font-family: 'bebas neue', sans-serif;
+    font-size: clamp(4rem, 14vw, 10rem);
+    color: #ff6b57;
+    line-height: 0.9;
+    letter-spacing: 0.04em;
+    display: flex;
+    align-items: center;
+    gap: 0.3em;
+    animation: fadeUp 0.7s 0.1s ease-both;
+
+}
+.retiro--tittle:hover{
+    color: #ffc857;
+
+}
+.arrow{
+    display: inline-block;
+    transition: transform 0.3s ease;
+    animation: pulse-x 1.8s ease both;
+}
+
+/*bus imagen*/
+.bus-image{
+    width: 100%;
+    height: auto;
+    max-width: 900px;
+}
+
+/*menu*/
+.nav--list{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    list-style-type: none;
+    padding: 1.2rem 3rem;
+    margin: 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border:#2563eb solid 1px;
+    border-radius: 12px;
+    background: #ffffff;
+   
+}
+
+.nav_link{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 0.9rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #2563eb;
+   
+}
+/*cuerpo de la pagina*/
+.parrafos {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  max-width: 860px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem;
+  }
+
+.parrafo--con-imagen {
+  display: flex;
+  align-items: center;
+  gap: 3rem;
+  padding: 2rem 2.5rem;
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  background: var(--bg-gris);
+}
+
+
+.parrafo--invertido {
+  flex-direction: row-reverse;
+}
+
+.parrafo__texto {
+  flex: 1;
+}
+
+.parrafo__texto h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--azul);
+  margin-bottom: 0.6rem;
+}
+
+.parrafo__texto p {
+  font-size: 0.95rem;
+  color: var(--texto-muted);
+  line-height: 1.75;
+  margin: 0;
+}
+
+.parrafo__imagen {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.parrafo__imagen img,
+.parrafo__imagen svg {
+  width: 100%;
+  max-width: 320px;
+  height: auto;
+}
+
+/* Mobile */
+@media (max-width: 640px) {
+  .parrafo--con-imagen,
+  .parrafo--invertido {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+}
+
+
+/* compra de pasajes*/
+h2{
+    font-family: plus jakarta sans, sans-serif;
+    color: #1f2937;
+    font-size: 1.5rem;
+    text-align: center;
+    margin:0;
+    border: 1px solid #2ec4b6;
+    border-radius: 12px;
+    padding: 1.2rem 3rem;
+    background: #2ec4b6;
+}
+
+.form-compra{
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    max-width: 480px;
+    margin: 0 auto;
+    padding: 2.5rem;
+    border-radius: 20px;
+    background: #f5f7fa;
+}
+.campo{
+    display: flex;
+    flex-direction: column;
+    gap: 0.45rem;
+}
+.campo label{
+    font-size: 0.75rem;
+    font-weight: 600;
+    letter-spacing: 0.1rem;
+    text-transform: uppercase;
+    color: #1f2937;
+}
+.campo input{
+    width: 100%;
+    padding: 0.8rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    appearance: none;
+    -webkit-appearance: none;
+    transition: border-color 0.2s ease;
+    cursor: pointer;
+}
+.campo input:focus{
+    border-color: #2563eb;
+    outline: none;
+}
+
+.campo input[type="submit"]; ; ::-webkit-inner-spin-button
+.campo input[type="submit"]; ; ::-webkit-outer-spin-button{
+    -webkit-appearance: none;  
+}
+
+.btn-comprar{
+    width: 100%;
+    padding: 1rem;
+    margin-top: 0.5rem;
+    background: #ffc857;
+    color: #1f2937;
+    border: none;
+    border-radius: 12px;
+    font-size: 1rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    transition: background 0.2s ease, transform 0.15s ease;
+
+}
+.btn-comprar:hover{
+    background: #ff6b57;
+    transform: translateY(-2px);
+}
+.btn-comprar:active{
+    transform: translateY(0);
+}
+
+/*footer*/
+.footer{
+   border-top: 1px solid var(--border);
+   padding: 2.5rem 1.5rem;
+   background: var(--big-card);
+}
+
+.footer-content{
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+.footer-info p{
+    font-size: 0.78rem;
+    color: #6b7280;
+}
+.derechos p{
+    font-size: 0.78rem;
+    color: #6b7280;
+}
+
+
+
+
+/* ══════════════════════════════════════
+   CSS COMPARTIDO — páginas del menú
+   recorrido.css / horarios.css / contacto.css
+   Podés usar este mismo archivo para las 3
+   páginas o dividirlo en 3 archivos iguales
+══════════════════════════════════════ */
+
+/* ─── NAVBAR ─── */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 3rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: var(--bg-white, #fff);
+  border-bottom: 1px solid var(--border, rgba(0,0,0,0.08));
+}
+
+.nav__logo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.6rem;
+  letter-spacing: 0.08em;
+  color: var(--texto, #1F2937);
+}
+
+.nav__logo span { color: var(--azul, #2563EB); }
+
+.nav--list {
+  display: flex;
+  gap: 2.5rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nav_link {
+  font-size: 0.85rem;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: var(--texto-muted, #6B7280);
+  transition: color 0.2s ease;
+}
+
+.nav_link:hover,
+.nav_link--active {
+  color: var(--azul, #2563EB);
+}
+
+/* ─── PAGE HERO ─── */
+.page-hero {
+  padding: 5rem 1.5rem 4rem;
+  background: var(--bg-gris, #F5F7FA);
+  border-bottom: 1px solid var(--border, rgba(0,0,0,0.08));
+}
+
+.page-hero__inner {
+  max-width: 860px;
+  margin: 0 auto;
+}
+
+.page-hero__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.28em;
+  color: var(--azul, #2563EB);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+  font-weight: 600;
+}
+
+.page-hero__title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(3.5rem, 9vw, 7rem);
+  letter-spacing: 0.04em;
+  color: var(--texto, #1F2937);
+  line-height: 0.95;
+  margin: 0 0 1.2rem;
+}
+
+.page-hero__sub {
+  font-size: 0.95rem;
+  color: var(--texto-muted, #6B7280);
+  margin: 0 0 1.5rem;
+}
+
+.page-hero__pills {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.pill {
+  background: #fff;
+  border: 1px solid var(--border, rgba(0,0,0,0.08));
+  color: var(--azul, #2563EB);
+  padding: 0.4rem 1rem;
+  border-radius: 100px;
+  font-size: 0.82rem;
+  font-weight: 500;
+}
+
+/* ─── SECCIÓN GENÉRICA ─── */
+.section__label {
+  font-size: 0.72rem;
+  letter-spacing: 0.25em;
+  color: var(--texto-muted, #6B7280);
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+}
+
+.section__title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(2.2rem, 5vw, 3.5rem);
+  letter-spacing: 0.04em;
+  color: var(--texto, #1F2937);
+  line-height: 1;
+  margin: 0 0 2.5rem;
+}
+
+/* ══════════════════════════════════════
+   RECORRIDO
+══════════════════════════════════════ */
+
+.mapa-section {
+  padding: 5rem 1.5rem;
+  background: var(--bg-white, #fff);
+}
+
+.mapa-section__inner { max-width: 860px; margin: 0 auto; }
+
+.mapa-section__header { margin-bottom: 2rem; }
+
+.mapa-section__desc {
+  font-size: 0.9rem;
+  color: var(--texto-muted, #6B7280);
+  margin: -1.5rem 0 2rem;
+}
+
+.mapa-wrapper {
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border, rgba(0,0,0,0.08));
+  margin-bottom: 2.5rem;
+  box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+}
+
+.mapa-iframe { display: block; }
+
+/* Paradas */
+.paradas {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+}
+
+.parada {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border, rgba(0,0,0,0.08));
+  background: var(--bg-gris, #F5F7FA);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.parada:hover { border-color: var(--azul, #2563EB); }
+
+.parada--activa {
+  border-color: var(--azul, #2563EB);
+  background: #EFF6FF;
+}
+
+.parada__linea {
+  width: 4px;
+  height: 24px;
+  margin-left: calc(1.5rem + 18px);
+  background: linear-gradient(to bottom, var(--azul, #2563EB), var(--coral, #FF6B57));
+  opacity: 0.3;
+  border-radius: 2px;
+}
+
+.parada__marker {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1rem;
+  flex-shrink: 0;
+  background: var(--bg-white, #fff);
+  color: var(--azul, #2563EB);
+  border: 2px solid var(--azul, #2563EB);
+}
+
+.parada__marker--origen { background: var(--azul, #2563EB); color: #fff; border: none; }
+.parada__marker--destino { background: var(--coral, #FF6B57); color: #fff; border: none; }
+
+.parada__info { flex: 1; }
+
+.parada__nombre {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--texto, #1F2937);
+  margin-bottom: 0.2rem;
+}
+
+.parada__detalle {
+  font-size: 0.82rem;
+  color: var(--texto-muted, #6B7280);
+}
+
+.parada__tiempo {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.1rem;
+  color: var(--azul, #2563EB);
+  white-space: nowrap;
+}
+
+/* Info tramo */
+.tramo-info {
+  display: flex;
+  gap: 1.2rem;
+  padding: 1.5rem 2rem;
+  background: #EFF6FF;
+  border: 1px solid #BFDBFE;
+  border-radius: 14px;
+  align-items: flex-start;
+}
+
+.tramo-info__icon { font-size: 2rem; }
+
+.tramo-info__titulo {
+  font-weight: 700;
+  font-size: 1rem;
+  color: var(--texto, #1F2937);
+  margin-bottom: 0.4rem;
+}
+
+.tramo-info__desc {
+  font-size: 0.88rem;
+  color: var(--texto-muted, #6B7280);
+  line-height: 1.7;
+}
+
+/* Stats */
+.stats-section {
+  padding: 4rem 1.5rem;
+  background: var(--bg-gris, #F5F7FA);
+  border-top: 1px solid var(--border, rgba(0,0,0,0.08));
+}
+
+.stats-section__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1px;
+  border: 1px solid var(--border, rgba(0,0,0,0.08));
+  border-radius: 16px;
+  overflow: hidden;
+  background: var(--border, rgba(0,0,0,0.08));
+}
+
+.stat-item {
+  background: #fff;
+  padding: 2rem 1.5rem;
+  text-align: center;
+}
+
+.stat-item__valor {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 3rem;
+  color: var(--azul, #2563EB);
+  line-height: 1;
+  margin-bottom: 0.4rem;
+}
+
+.stat-item__valor span {
+  font-size: 1.3rem;
+  color: var(--coral, #FF6B57);
+  margin-left: 2px;
+}
+
+.stat-item__label {
+  font-size: 0.78rem;
+  color: var(--texto-muted, #6B7280);
+}
+
+/* ══════════════════════════════════════
+   HORARIOS
+══════════════════════════════════════ */
+
+.horarios-section {
+  padding: 5rem 1.5rem;
+  background: var(--bg-white, #fff);
+}
+
+.horarios-section__inner { max-width: 900px; margin: 0 auto; }
+
+.horarios-header { margin-bottom: 2rem; }
+
+.dir-selector {
+  display: flex;
+  gap: 0.6rem;
+  margin-bottom: 2rem;
+}
+
+.dir-btn {
+  padding: 0.55rem 1.4rem;
+  border-radius: 100px;
+  border: 1px solid var(--border, rgba(0,0,0,0.12));
+  background: transparent;
+  color: var(--texto-muted, #6B7280);
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.dir-btn:hover { border-color: var(--azul, #2563EB); color: var(--azul, #2563EB); }
+.dir-btn--active { background: var(--azul, #2563EB); border-color: var(--azul, #2563EB); color: #fff; }
+
+.tabla-wrapper {
+  border: 1px solid var(--border, rgba(0,0,0,0.08));
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.5rem;
+}
+
+.tabla-wrapper--oculta { display: none; }
+
+.tabla-horarios {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabla-horarios thead tr {
+  background: var(--bg-gris, #F5F7FA);
+}
+
+.tabla-horarios th {
+  padding: 1rem 1.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto-muted, #6B7280);
+  text-align: left;
+  border-bottom: 1px solid var(--border, rgba(0,0,0,0.08));
+}
+
+.tabla-horarios td {
+  padding: 1rem 1.5rem;
+  font-size: 0.9rem;
+  color: var(--texto, #1F2937);
+  border-bottom: 1px solid var(--border, rgba(0,0,0,0.06));
+}
+
+.tabla-horarios tbody tr:last-child td { border-bottom: none; }
+
+.tabla-horarios tbody tr:hover { background: var(--bg-gris, #F5F7FA); }
+
+.hora {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.2rem !important;
+  color: var(--azul, #2563EB) !important;
+  letter-spacing: 0.05em;
+}
+
+.badge {
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.badge--ejecutivo { background: #EFF6FF; color: var(--azul, #2563EB); }
+.badge--comun     { background: #F5F7FA; color: var(--texto-muted, #6B7280); }
+
+.estado {
+  padding: 0.3rem 0.8rem;
+  border-radius: 100px;
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+.estado--ok      { background: #ECFDF5; color: #059669; }
+.estado--demorado { background: #FFF7ED; color: #D97706; }
+
+.horarios-nota {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.82rem;
+  color: var(--texto-muted, #6B7280);
+  padding: 1rem 1.5rem;
+  background: var(--bg-gris, #F5F7FA);
+  border-radius: 10px;
+}
+
+.horarios-nota svg { color: var(--azul, #2563EB); flex-shrink: 0; }
+
+/* ══════════════════════════════════════
+   CONTACTO
+══════════════════════════════════════ */
+
+.contacto-section {
+  padding: 5rem 1.5rem;
+  background: var(--bg-white, #fff);
+}
+
+.contacto-section__inner { max-width: 860px; margin: 0 auto; }
+
+.contacto-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  margin-bottom: 4rem;
+}
+
+.contacto-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.2rem;
+  padding: 1.5rem;
+  border: 1px solid var(--border, rgba(0,0,0,0.08));
+  border-radius: 16px;
+  background: var(--bg-gris, #F5F7FA);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.contacto-card:hover {
+  border-color: var(--azul, #2563EB);
+  transform: translateY(-2px);
+}
+
+.contacto-card--destacada {
+  border-color: var(--aqua, #2EC4B6);
+  background: #F0FDFB;
+}
+
+.contacto-card__icon {
+  width: 44px;
+  height: 44px;
+  min-width: 44px;
+  background: #fff;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--azul, #2563EB);
+  border: 1px solid var(--border, rgba(0,0,0,0.08));
+}
+
+.contacto-card__icon svg { width: 20px; height: 20px; }
+
+.contacto-card--destacada .contacto-card__icon { color: var(--aqua, #2EC4B6); }
+
+.contacto-card__label {
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--texto-muted, #6B7280);
+  margin-bottom: 0.3rem;
+}
+
+.contacto-card__valor {
+  font-weight: 700;
+  font-size: 0.95rem;
+  color: var(--texto, #1F2937);
+  margin-bottom: 0.2rem;
+}
+
+.contacto-card__sub {
+  font-size: 0.8rem;
+  color: var(--texto-muted, #6B7280);
+}
+
+/* Redes */
+.redes-section { margin-top: 1rem; }
+
+.redes-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.red-card {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+  padding: 1.2rem 1.5rem;
+  border-radius: 14px;
+  border: 1px solid var(--border, rgba(0,0,0,0.08));
+  background: var(--bg-gris, #F5F7FA);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.red-card:hover { transform: translateX(6px); }
+
+.red-card--instagram:hover { border-color: #E1306C; }
+.red-card--facebook:hover  { border-color: #1877F2; }
+.red-card--twitter:hover   { border-color: #1DA1F2; }
+
+.red-card__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.red-card--instagram .red-card__icon { background: #FFF0F5; color: #E1306C; }
+.red-card--facebook  .red-card__icon { background: #EFF6FF; color: #1877F2; }
+.red-card--twitter   .red-card__icon { background: #EFF6FF; color: #1DA1F2; }
+
+.red-card__content { flex: 1; }
+
+.red-card__nombre {
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--texto, #1F2937);
+  margin-bottom: 0.2rem;
+}
+
+.red-card__usuario {
+  font-size: 0.83rem;
+  color: var(--texto-muted, #6B7280);
+}
+
+.red-card__arrow {
+  font-size: 1.2rem;
+  color: var(--texto-muted, #6B7280);
+  transition: transform 0.2s ease;
+}
+
+.red-card:hover .red-card__arrow { transform: translateX(4px); }
+
+/* ─── FOOTER ─── */
+.footer {
+  border-top: 1px solid var(--border, rgba(0,0,0,0.08));
+  padding: 2.5rem 1.5rem;
+  background: var(--bg-gris, #F5F7FA);
+}
+
+.footer__inner {
+  max-width: 860px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.footer__brand {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 1.3rem;
+  letter-spacing: 0.08em;
+  color: var(--texto, #1F2937);
+}
+
+.footer__brand span { color: var(--coral, #FF6B57); }
+
+.footer__info { font-size: 0.78rem; color: var(--texto-muted, #6B7280); }
+
+/* ─── RESPONSIVE ─── */
+@media (max-width: 640px) {
+  .navbar { padding: 1rem 1.2rem; }
+  .nav--list { gap: 1.2rem; }
+  .nav_link { font-size: 0.78rem; }
+  .stats-section__inner { grid-template-columns: repeat(2, 1fr); }
+  .contacto-grid { grid-template-columns: 1fr; }
+  .tabla-horarios th,
+  .tabla-horarios td { padding: 0.8rem 1rem; font-size: 0.82rem; }
+  .footer__inner { flex-direction: column; }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*animaciones*/
+@keyframes fadeUp {
+    from { opacity: 0;   transform: translateY(24px); }
+    to { opacity: 1;   transform: translateY(0); }
+    }
+
+@keyframes pulse-x {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(10px); }
+    }
