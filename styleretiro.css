@@ -17,26 +17,29 @@ body{
     
 }
 
+
 /*titulo ruta 3*/
 .ruta3tittle{
     font-family: 'bebas neue', sans-serif;
-    font-size: 1.2rem;
+    font-size: 2rem;
     letter-spacing: 0.3em;
     color: #2563eb;
     text-transform: uppercase;
     margin-bottom: 0.5rem;
     opacity: 0.8;
+    font-weight: 600;
 }
 
 /*titulo Retiro -> Zarate*/
 .retiro--tittle{
     font-family: 'bebas neue', sans-serif;
-    font-size: clamp(4rem, 14vw, 10rem);
+    font-size: clamp(2.5rem, 6vw, 4rem);
     color: #ff6b57;
     line-height: 0.9;
     letter-spacing: 0.04em;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 0.3em;
     animation: fadeUp 0.7s 0.1s ease-both;
 
@@ -55,8 +58,11 @@ body{
 .bus-image{
     width: 100%;
     height: auto;
-    max-width: 900px;
+    max-width: 500px;
+    align-items: center;
+    justify-content: center;
 }
+
 
 /*menu*/
 .nav--list{
